@@ -2,6 +2,6 @@
 
 # Building ASP.NET CORE in VS CODE
 https://www.syncfusion.com/blogs/post/how-to-develop-an-asp-net-core-application-using-visual-studio-code.aspx#:~:text=Create%20an%20ASP.NET%20Core%20application,
--After%20installing%20the&text=Open%20that%20empty%20directory%20in,or%20Terminal%20%2D%3E%20New%20Terminal.&text=Then%2C%20it%20will%20show%20you,Select%20the%20web%20application%20option.
 
-https://code.visualstudio.com/docs/containers/quickstart-aspnet-core
+# Unit testing
+https://docs.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/unit-testing-with-aspnet-web-api#:~:text=use%20either%20approach.-,Add%20unit%20test%20project%20when%20creating%20the%20application,project%20is%20automatically%20named%20StoreApp.
