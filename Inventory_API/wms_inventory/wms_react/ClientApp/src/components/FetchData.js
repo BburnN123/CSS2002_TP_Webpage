@@ -3,13 +3,11 @@ import React, { Component } from 'react';
 export class FetchData extends Component {
   static displayName = FetchData.name;
 
-  // First step of fetching api
   constructor(props) {
     super(props);
     this.state = { forecasts: [], loading: true };
-    }
+  }
 
-  // Second step of fetching api
   componentDidMount() {
     this.populateWeatherData();
   }
@@ -38,7 +36,7 @@ export class FetchData extends Component {
       </table>
     );
   }
- // Last step of feteching the api
+
   render() {
     let contents = this.state.loading
       ? <p><em>Loading...</em></p>
