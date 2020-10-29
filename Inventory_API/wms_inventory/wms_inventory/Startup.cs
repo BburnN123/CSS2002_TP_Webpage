@@ -34,6 +34,7 @@ namespace wms_inventory
             // Provide which repository you want to use Mock or SQL
             // SQL => AddScoped
             services.AddScoped<ITrackingRepository, MockTrackingRepository>();
+            services.AddScoped<ITaskListRepository, MockTasklistRepository>();
 
 
         }
@@ -51,7 +52,7 @@ namespace wms_inventory
             app.UseDefaultFiles();
 
             app.UseStaticFiles();
-            app.UseSpaStaticFiles();
+
 
             app.UseRouting();
 

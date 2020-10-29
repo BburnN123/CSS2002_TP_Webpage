@@ -22,5 +22,7 @@ namespace wms_react.Models
         public DateTime datetime { get; set; }
         [Column(TypeName = "int")]
         public int packing_weight { get; set; }
+
+        public TaskList task_obj { get; set; }
     }
 }
