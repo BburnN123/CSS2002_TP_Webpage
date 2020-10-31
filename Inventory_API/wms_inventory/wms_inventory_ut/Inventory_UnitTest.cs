@@ -99,10 +99,29 @@ namespace wms_inventory_ut
         /******************************** END OF TRACKING UNIT TEST ********************************/
 
         [Fact]
-        public void Combining_Two_Classes()
+        public void Combining_Two_Obj()
+        {
+            // Combining 2 object tracking and tasklist
+            var controller = new InventoryController(new MockTrackingRepository(), new MockTasklistRepository());
+ 
+            //Tracking id : 123
+            string trackingId = "123";
+            // Tracking Object
+            var get_tracking = controller.Get_Tracking(trackingId);
+
+            var task_obj = controller.Get_Task(trackingId);
+            //Task Object
+            get_tracking.task_obj = controller.Get_Task(trackingId);
+
+            // Should not be null
+            Assert.NotNull(get_tracking.task_obj);
+        }
+
+
+        [Fact]
+        public void Retreiving_Tasklist_From_Tracking()
         {
             var controller = new InventoryController(new MockTrackingRepository(), new MockTasklistRepository());
-          
 
             //Tracking id : 123
             string trackingId = "123";
@@ -113,9 +132,8 @@ namespace wms_inventory_ut
             //Task Object
             get_tracking.task_obj = controller.Get_Task(trackingId);
 
-            // Assign the object into the tracking
-           
-            
+
+
             // Should not be null
             Assert.NotNull(get_tracking.task_obj);
         }
