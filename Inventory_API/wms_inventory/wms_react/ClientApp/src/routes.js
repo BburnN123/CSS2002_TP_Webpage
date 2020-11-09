@@ -9,8 +9,12 @@ import LoginView from 'src/views/auth/LoginView';
 import NotFoundView from 'src/views/errors/NotFoundView';
 import ProductListView from 'src/views/product/ProductListView';
 import RegisterView from 'src/views/auth/RegisterView';
-import SettingsView from 'src/views/settings/SettingsView';
+import SettingsView from 'src/views/settings/SettingsView'; 
 
+import TrackingView from 'src/views/delivery/TrackingView';
+
+
+// React Router where all the magic happens
 const routes = [
   {
     path: 'app',
@@ -21,6 +25,9 @@ const routes = [
       { path: 'dashboard', element: <DashboardView /> },
       { path: 'products', element: <ProductListView /> },
       { path: 'settings', element: <SettingsView /> },
+
+      { path: 'delivery', element: <TrackingView /> },
+
       { path: '*', element: <Navigate to="/404" /> }
     ]
   },
