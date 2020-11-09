@@ -1,6 +1,6 @@
 using System;
 
-namespace WebApplication1
+namespace wms_react_1
 {
     public class WeatherForecast
     {
