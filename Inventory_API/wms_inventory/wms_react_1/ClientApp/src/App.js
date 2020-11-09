@@ -6,15 +6,22 @@ import theme from 'src/theme';
 import routes from 'src/routes';
 
 import './custom.css'
+import MainLayout from './layouts/MainLayout';
+import DashboardLayout from './layouts/MainLayout';
+import { Home } from 'src/components/Home'
+
+
+const routing = useRoutes(routes);
 
 export default class App extends Component {
   static displayName = App.name;
 
   render() {
-    const routing = useRoutes(routes);
+
     return (
       <ThemeProvider theme={theme}>
         <GlobalStyles />
+   
         {routing}
       </ThemeProvider>
     );

@@ -92,6 +92,31 @@ const NavBar = ({ onMobileClose, openMobile }) => {
   }, [location.pathname]);
 
   // change navbar background color here
+  //const content = (
+  //  <Box
+  //    height="100%"
+  //    display="flex"
+  //    flexDirection="column"
+  //    bgcolor="#61C1D2"
+  //  >
+      
+  //    <Box 
+  //    p={5}>
+  //      <List>
+  //        {items.map((item) => (
+  //          <NavItem
+  //            href={item.href}
+  //            key={item.title}
+  //            title={item.title}
+  //            icon={item.icon}
+  //          />
+  //        ))}
+  //      </List>
+  //    </Box>
+     
+  //  </Box>
+  //);
+
   const content = (
     <Box
       height="100%"
@@ -99,9 +124,17 @@ const NavBar = ({ onMobileClose, openMobile }) => {
       flexDirection="column"
       bgcolor="#61C1D2"
     >
-      
-      <Box 
-      p={5}>
+      <Box
+        alignItems="center"
+        display="flex"
+        flexDirection="column"
+        p={2}
+      >
+
+
+      </Box>
+
+      <Box p={2}>
         <List>
           {items.map((item) => (
             <NavItem
@@ -113,7 +146,17 @@ const NavBar = ({ onMobileClose, openMobile }) => {
           ))}
         </List>
       </Box>
-     
+      <Box flexGrow={1} />
+      <Box
+        p={2}
+        m={2}
+        bgcolor="background.dark"
+      >
+
+    
+   
+
+      </Box>
     </Box>
   );
 

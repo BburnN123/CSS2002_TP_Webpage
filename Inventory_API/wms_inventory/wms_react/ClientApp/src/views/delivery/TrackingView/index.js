@@ -7,7 +7,7 @@ import {
 import Page from 'src/components/Page';
 
 //import Profile from './Profile';
-import ProfileDetails from './ProfileDetails';
+//import ProfileDetails from './ProfileDetails';
 
 import TrackingTab from './TrackingTab';
 import TrackCargo from './TrackCargo';
