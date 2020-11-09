@@ -1,29 +1,22 @@
 import React, { Component } from 'react';
-import { ThemeProvider } from '@material-ui/core';
-import { useRoutes } from 'react-router-dom';
-import GlobalStyles from 'src/components/GlobalStyles';
-import theme from 'src/theme';
-import routes from 'src/routes';
+import { Route } from 'react-router';
+import { Layout } from './components/Layout';
+import { Home } from './components/Home';
+import { FetchData } from './components/FetchData';
+import { Counter } from './components/Counter';
 
 import './custom.css'
-import MainLayout from './layouts/MainLayout';
-import DashboardLayout from './layouts/MainLayout';
-import { Home } from 'src/components/Home'
-
-
-const routing = useRoutes(routes);
 
 export default class App extends Component {
   static displayName = App.name;
 
-  render() {
-
+  render () {
     return (
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-   
-        {routing}
-      </ThemeProvider>
+      <Layout>
+        <Route exact path='/' component={Home} />
+        <Route path='/counter' component={Counter} />
+        <Route path='/fetch-data' component={FetchData} />
+      </Layout>
     );
   }
 }
